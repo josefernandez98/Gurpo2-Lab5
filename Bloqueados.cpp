@@ -9,6 +9,11 @@ Bloqueados::Bloqueados () {
     nivelOdio = 0;
 }
 
+Bloqueados::Bloqueados(string nombreCompleto, string numeroTelefono, string direccionCorreo, int nivelOdio):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),nivelOdio(nivelOdio){
+
+}
+
 int Bloqueados::getNivelOdio() {
     return nivelOdio;
 }//Fin del metodo

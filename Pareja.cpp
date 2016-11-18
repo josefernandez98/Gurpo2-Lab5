@@ -9,6 +9,11 @@ Pareja::Pareja(){
   fecha="";
 }
 
+Pareja::Pareja(string nombreCompleto, string numeroTelefono, string direccionCorreo, string fecha):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),fecha(fecha){
+
+}
+
 string Pareja::getFecha(){
   return fecha;
 }

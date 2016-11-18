@@ -7,6 +7,7 @@ class Bloqueados : public Contacto{
         int nivelOdio;
     public:
         Bloqueados();
+        Bloqueados();
         int getNivelOdio();
         void setNivelOdio(int);
         string toString();

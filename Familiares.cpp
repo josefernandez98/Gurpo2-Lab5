@@ -8,6 +8,10 @@ using namespace std;
 Familiares::Familiares() {
     relacionFamiliar = "";
 }
+Familiares::Familiares(string nombreCompleto, string numeroTelefono, string direccionCorreo, string relacionFamiliar):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),relacionFamiliar(relacionFamiliar){
+
+}
 
 string Familiares::toString() {
     stringstream ss;

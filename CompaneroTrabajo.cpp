@@ -9,6 +9,11 @@ CompaneroTrabajo::CompaneroTrabajo(){
   departamento="";
 }
 
+CompaneroTrabajo::CompaneroTrabajo(string nombreCompleto, string numeroTelefono, string direccionCorreo, int nivel):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),nivel(nivel){
+
+}
+
 string CompaneroTrabajo::getDepartamento(){
   return departamento;
 }

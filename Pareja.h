@@ -9,6 +9,7 @@ class Pareja: public Contacto {
     string fecha;
   public:
     Pareja();
+    Pareja();
     string getFecha();
     void setFecha(string);
     string toString();

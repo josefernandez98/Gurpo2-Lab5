@@ -9,6 +9,7 @@ class Amantes : public Contacto  {
         string horarioDisponible;
     public:
         Amantes();
+        Amantes();
         string getHorarioDisponible();
         void setHorarioDisponible(string);
         string toString();
