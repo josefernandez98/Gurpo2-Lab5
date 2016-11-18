@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include "Contacto.h"
 #include "Amigos.h"
 #include "Pareja.h"
@@ -17,6 +19,7 @@ void menu2();
 int main(int argc, char const *argv[]) {
   int opcion=0;
   int opcion2=0;
+  vector<Contacto*> lista;
   do {
     menu();
     cin>>opcion;
@@ -26,31 +29,63 @@ int main(int argc, char const *argv[]) {
         menu2();
         cin>>opcion2;
         cout << endl;
-        if(opcion2==1){
+        if(opcion2==1){ //amigos
+          int nivel=0;
+          string nombreCompleto="";
+          string numeroTelefono="";
+          string direccionCorreo="";
+
+          cout << "Ingrese el Nombre Completo: ";
+          cin.ignore();
+          getline(cin,nombreCompleto);
+          cout << endl;
+          cout << "Ingrese el Numero de Telefono: ";
+          cin.ignore();
+          getline(cin,numeroTelefono);
+          cout << endl;
+          cout << "Ingrese la direccion de Correo: ";
+          cin.ignore();
+          getline(cin,direccionCorreo);
+          cout << endl;
+          cout << "Ingrese el nivel de amigo (1-100): ";
+          cin >> nivel;
+          cout << endl;
+          for (;(nivel<1) || (nivel>100) ;) {
+            cout << "Ingreso un valor invalido" << endl;
+            cout << "Ingrese el nivel de amigo (1-100): ";
+            cin >> nivel;
+            cout << endl;
+          }
+          lista.push_back(new Amigos(nombreCompleto,numeroTelefono,direccionCorreo,nivel));
+        }
+        if(opcion2==2){ //pareja
+          string fecha="";
+          cout << "Ingrese fecha que empezaron a salir: ";
+          cin >> fecha;
+          cout << endl;
+
 
         }
-        if(opcion2==2){
+        if(opcion2==3){ //companero trabajo
 
         }
-        if(opcion2==3){
+        if(opcion2==4){ //companero clase
 
         }
-        if(opcion2==4){
+        if(opcion2==5){ //familiares
 
         }
-        if(opcion2==5){
+        if(opcion2==6){ //amantes
 
         }
-        if(opcion2==6){
+        if(opcion2==7){ //bloqueados
 
         }
-        if(opcion2==7){
-
-        }
-        if(opcion2==8){
+        if(opcion2==8){ //regresar
           cout << endl;
           cout << "Regresando... "<<endl;
         }
+
       } while(opcion2!=8);
     }//Fin del if opcion 1
     if(opcion==2){
@@ -77,8 +112,8 @@ void menu2(){
   cout << "3) Companero de Trabajo" << endl;
   cout << "4) Companero de Clase" << endl;
   cout << "5) Familiares" << endl;
-    cout << "6) Amantes" << endl;
-      cout << "7) Bloqueados" << endl;
-        cout << "8) Regresar" << endl;
+  cout << "6) Amantes" << endl;
+  cout << "7) Bloqueados" << endl;
+  cout << "8) Regresar" << endl;
   cout << "Ingrese su opcion: ";
 }

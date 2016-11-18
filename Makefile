@@ -17,4 +17,6 @@ Contacto.o: Contacto.h Contacto.cpp
 Familiares.o: Contacto.h Familiares.h Familiares.cpp
 	g++ -c Familiares.cpp
 Pareja.o: Contacto.h Pareja.h Pareja.cpp
-	g++ -c Pareja.cpp 
+	g++ -c Pareja.cpp
+Clean:
+	rm -f *.o temp 

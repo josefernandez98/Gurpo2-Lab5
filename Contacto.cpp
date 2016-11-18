@@ -10,6 +10,10 @@ Contacto::Contacto () {
     numeroTelefono = "";
     direccionCorreo = "";
 }//Fin del constructor
+Contacto::Contacto (string nombreCompleto, string numeroTelefono, string direccionCorreo):
+nombreCompleto(nombreCompleto), numeroTelefono(numeroTelefono), direccionCorreo(direccionCorreo) {
+
+}//Fin del constructor
 
 string Contacto::getNombreCompleto () {
     return nombreCompleto;

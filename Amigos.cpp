@@ -5,9 +5,14 @@
 using std::stringstream;
 using std::string;
 //construcctor
-Amigos::Amigos(){
+Amigos::Amigos(): Contacto(){
   nivel=0;
 }
+Amigos::Amigos(string nombreCompleto, string numeroTelefono, string direccionCorreo, int nivel):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),nivel(nivel){
+  
+}
+
 
 int Amigos::getNivel(){
   return nivel;
