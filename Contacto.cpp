@@ -5,13 +5,19 @@
 using namespace std;
 
 
+Contacto::Contacto () {
+    nombreCompleto = "";
+    numeroTelefono = "";
+    direccionCorreo = "";
+}//Fin del constructor
+
 string Contacto::getNombreCompleto () {
     return nombreCompleto;
 }//Fin del metodo
 
 string Contacto::toString() {
     stringstream ss;
-    ss << "Nombre Completo; Numero de Telefono; Direccion de Correo;"
+    ss << "Nombre Completo; Numero de Telefono; Direccion de Correo;";
     ss << nombreCompleto << ";";
     ss << numeroTelefono << ";";
     ss << direccionCorreo << ";";

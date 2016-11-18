@@ -1,12 +1,17 @@
 #include "Amantes.h"
+#include "Contacto.h"
 #include <string>
 #include <sstream>
 
 using namespace std;
 
+Amantes::Amantes () {
+    horarioDisponible = "";
+}
+
 string Amantes::toString () {
     stringstream ss;
-    ss << "Horario Disponible;"
+    ss << "Horario Disponible;";
     ss << horarioDisponible << ";";
     return ss.str();
 }//Fin del metodo

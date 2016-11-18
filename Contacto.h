@@ -6,10 +6,11 @@ using namespace std;
 
 class Contacto {
     private:
-        string nombreCompleto = "";
-        string numeroTelefono = "";
-        string direccionCorreo = "";
+        string nombreCompleto;
+        string numeroTelefono;
+        string direccionCorreo;
     public:
+        Contacto();
         string getNombreCompleto();
         string getNumeroTelefono();
         string getDireccionCorreo();

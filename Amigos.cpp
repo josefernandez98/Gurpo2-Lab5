@@ -1,8 +1,9 @@
 #include <sstream>
 #include "Amigos.h"
+#include "Contacto.h"
 
 using std::stringstream;
-
+using std::string;
 //construcctor
 Amigos::Amigos(){
   nivel=0;
@@ -20,5 +21,5 @@ string Amigos::toString(){
   stringstream ss;
   ss << "Amigo; Nivel: ";
   ss<< nivel;
-  return ss.c_str();
+  return ss.str();
 }
