@@ -371,6 +371,7 @@ int main(int argc, char const *argv[]) {
           }
         }
         archivo.close();
+        cout<<"Archivo Guardado como Contacto.txt" << endl;
     }//Fin del if opcion 3
     if (opcion == 5) {
         cout << "Adios" << endl;
