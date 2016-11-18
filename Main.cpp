@@ -15,7 +15,6 @@ void menu();
 void menu2();
 
 int main(int argc, char const *argv[]) {
-  cout << "Hola " << endl;
   int opcion=0;
   int opcion2=0;
   do {
@@ -51,39 +50,18 @@ int main(int argc, char const *argv[]) {
         if(opcion2==8){
           cout << endl;
           cout << "Regresando... "<<endl;
-
         }
-
-
-
-
-
       } while(opcion2!=8);
-
-    }
+    }//Fin del if opcion 1
     if(opcion==2){
 
-    }
+    }//Fin del if opcion 2
     if(opcion==3){
       cout << "Adios" << endl;
-    }
-
-
-
-
-
-
+    }//Fin del if opcion 3
   } while(opcion!=3);
-
-
-
-
-
-
-
-
   return 0;
-}
+}//Fin del main
 
 void menu(){
   cout << "Bienvenido al Guarda Contactos || Made by Grupo 2" << endl;
