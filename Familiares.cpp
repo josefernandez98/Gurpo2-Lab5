@@ -1,10 +1,17 @@
+#include <sstream>
+#include <string>
 #include "Familiares.h"
+#include "Contacto.h"
 
 using namespace std;
 
+Familiares::Familiares() {
+    relacionFamiliar = "";
+}
+
 string Familiares::toString() {
     stringstream ss;
-    ss << "Relacion Familiar;"
+    ss << "Relacion Familiar;";
     ss << relacionFamiliar << ";";
     return ss.str();
 }

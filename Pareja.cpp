@@ -1,5 +1,6 @@
 #include <sstream>
 #include "Pareja.h"
+#include "Contacto.h"
 
 using std::stringstream;
 
@@ -20,5 +21,5 @@ string Pareja::toString(){
   stringstream ss;
   ss << "Pareja; Fecha de Aniversario: ";
   ss<< fecha;
-  return ss.c_str();
+  return ss.str();
 }

@@ -7,11 +7,9 @@
 class CompaneroClase: public Contacto {
   private:
     string clase;
-
   public:
     CompaneroClase();
     string getClase();
     void setClase(string);
     string toString();
-
 };
