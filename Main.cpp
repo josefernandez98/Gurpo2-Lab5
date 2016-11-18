@@ -80,11 +80,12 @@ int main(int argc, char const *argv[]) {
           cin.ignore();
           getline(cin,fecha);
           cout << endl;
-          
+
 
 
         }
         if(opcion2==3){ //companero trabajo
+
 
         }
         if(opcion2==4){ //companero clase
