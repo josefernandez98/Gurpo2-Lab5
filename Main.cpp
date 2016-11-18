@@ -147,10 +147,6 @@ int main(int argc, char const *argv[]) {
 
 
 
-
-
-
-
     }//Fin del if opcion 2
     if(opcion==3){
       cout << "Adios" << endl;
