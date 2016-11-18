@@ -60,9 +60,27 @@ int main(int argc, char const *argv[]) {
         }
         if(opcion2==2){ //pareja
           string fecha="";
-          cout << "Ingrese fecha que empezaron a salir: ";
-          cin >> fecha;
+          string nombreCompleto="";
+          string numeroTelefono="";
+          string direccionCorreo="";
+
+          cout << "Ingrese el Nombre Completo: ";
+          cin.ignore();
+          getline(cin,nombreCompleto);
           cout << endl;
+          cout << "Ingrese el Numero de Telefono: ";
+          cin.ignore();
+          getline(cin,numeroTelefono);
+          cout << endl;
+          cout << "Ingrese la direccion de Correo: ";
+          cin.ignore();
+          getline(cin,direccionCorreo);
+          cout << endl;
+          cout << "Ingrese fecha que empezaron a salir: ";
+          cin.ignore();
+          getline(cin,fecha);
+          cout << endl;
+          
 
 
         }
