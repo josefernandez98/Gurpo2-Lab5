@@ -16,6 +16,7 @@ using namespace std;
 void menu();
 void menu2();
 
+
 int main(int argc, char const *argv[]) {
   int opcion=0;
   int opcion2=0;
@@ -87,6 +88,7 @@ int main(int argc, char const *argv[]) {
         if(opcion2==3){ //companero trabajo
 
 
+
         }
         if(opcion2==4){ //companero clase
 
@@ -108,6 +110,46 @@ int main(int argc, char const *argv[]) {
       } while(opcion2!=8);
     }//Fin del if opcion 1
     if(opcion==2){
+      int indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+        if(dynamic_cast<Amigo>(lista.at(i))!=NULL){
+          Amigos* temp = dynamic_cast<Amigos*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<Pareja>(lista.at(i))!=NULL){
+          Pareja* temp = dynamic_cast<Pareja*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<CompaneroTrabajo>(lista.at(i))!=NULL){
+          CompaneroTrabajo* temp = dynamic_cast<CompaneroTrabajo*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<CompaneroClase>(lista.at(i))!=NULL){
+          CompaneroClase* temp = dynamic_cast<CompaneroClase*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<Familiares>(lista.at(i))!=NULL){
+          Familiares* temp = dynamic_cast<Familiares*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<Amantes>(lista.at(i))!=NULL){
+          Amantes* temp = dynamic_cast<Amantes*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+        if(dynamic_cast<Bloqueados>(lista.at(i))!=NULL){
+          Bloqueados* temp = dynamic_cast<Bloqueados*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+      }
+      cout << "Ingrese el numero que desea eliminar: ";
+      cin >> indice;
+      lista.erase(lista.begin() + indice);
+
+
+
+
+
+
 
     }//Fin del if opcion 2
     if(opcion==3){
