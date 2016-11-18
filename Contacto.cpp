@@ -16,7 +16,7 @@ nombreCompleto(nombreCompleto), numeroTelefono(numeroTelefono), direccionCorreo(
 }//Fin del constructor
 
 Contacto::~Contacto(){
-  
+
 }
 
 string Contacto::getNombreCompleto () {
@@ -25,7 +25,6 @@ string Contacto::getNombreCompleto () {
 
 string Contacto::toString() {
     stringstream ss;
-    ss << "Nombre Completo; Numero de Telefono; Direccion de Correo;";
     ss << nombreCompleto << ";";
     ss << numeroTelefono << ";";
     ss << direccionCorreo << ";";

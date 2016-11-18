@@ -25,7 +25,6 @@ void CompaneroTrabajo::setDepartamento(string departamento){
 
 string CompaneroTrabajo::toString(){
   stringstream ss;
-  ss << "Companero de Trabajo; Departemento: ";
-  ss<< departamento;
+  ss << Contacto::toString() << departamento;
   return ss.str();
 }

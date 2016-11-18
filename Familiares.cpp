@@ -15,8 +15,7 @@ Familiares::Familiares(string nombreCompleto, string numeroTelefono, string dire
 
 string Familiares::toString() {
     stringstream ss;
-    ss << "Relacion Familiar;";
-    ss << relacionFamiliar << ";";
+    ss << Contacto::toString() << relacionFamiliar << ";";
     return ss.str();
 }
 

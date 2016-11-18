@@ -41,8 +41,7 @@ int main(int argc, char const *argv[]) {
           getline(cin,nombreCompleto);
           cout << endl;
           cout << "Ingrese el Numero de Telefono: ";
-          cin.ignore();
-          getline(cin,numeroTelefono);
+          cin >> numeroTelefono;
           cout << endl;
           cout << "Ingrese la direccion de Correo: ";
           cin.ignore();
@@ -58,6 +57,7 @@ int main(int argc, char const *argv[]) {
             cout << endl;
           }
           lista.push_back(new Amigos(nombreCompleto,numeroTelefono,direccionCorreo,nivel));
+          cout << "Contacto agregado." << endl;
         }
         if(opcion2==2){ //pareja
           string fecha="";
@@ -81,6 +81,7 @@ int main(int argc, char const *argv[]) {
           getline(cin,fecha);
           cout << endl;
           lista.push_back(new Pareja(nombreCompleto,numeroTelefono,direccionCorreo,fecha));
+          cout << "Contacto agregado." << endl;
         }//Fin del if opcion 2
         if(opcion2==3){ //companero trabajo
             string departamento="";
@@ -104,6 +105,7 @@ int main(int argc, char const *argv[]) {
             getline(cin,departamento);
             cout << endl;
             lista.push_back(new CompaneroTrabajo(nombreCompleto,numeroTelefono,direccionCorreo, departamento));
+            cout << "Contacto agregado." << endl;
         }
         if(opcion2==4){ //companero clase
             string clase="";
@@ -127,6 +129,7 @@ int main(int argc, char const *argv[]) {
             getline(cin,clase);
             cout << endl;
             lista.push_back(new CompaneroClase(nombreCompleto,numeroTelefono,direccionCorreo,clase));
+            cout << "Contacto agregado." << endl;
         }
         if(opcion2==5){ //familiares
             string relacionFamiliar="";
@@ -150,6 +153,7 @@ int main(int argc, char const *argv[]) {
             getline(cin,relacionFamiliar);
             cout << endl;
             lista.push_back(new Familiares(nombreCompleto,numeroTelefono,direccionCorreo,relacionFamiliar));
+            cout << "Contacto agregado." << endl;
         }
         if(opcion2==6){ //amantes
             string horarioDisponible="";
@@ -173,6 +177,7 @@ int main(int argc, char const *argv[]) {
             getline(cin,horarioDisponible);
             cout << endl;
             lista.push_back(new Amantes(nombreCompleto,numeroTelefono,direccionCorreo,horarioDisponible));
+            cout << "Contacto agregado." << endl;
         }
         if(opcion2==7){ //bloqueados
             int nivelOdio=0;
@@ -201,6 +206,7 @@ int main(int argc, char const *argv[]) {
             }
             cout << endl;
             lista.push_back(new Bloqueados(nombreCompleto,numeroTelefono,direccionCorreo,nivelOdio));
+            cout << "Contacto agregado." << endl;
         }
         if(opcion2==8){ //regresar
           cout << endl;

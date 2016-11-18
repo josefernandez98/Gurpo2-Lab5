@@ -10,7 +10,7 @@ Amigos::Amigos(): Contacto(){
 }
 Amigos::Amigos(string nombreCompleto, string numeroTelefono, string direccionCorreo, int nivel):Contacto(nombreCompleto, numeroTelefono
 ,direccionCorreo),nivel(nivel){
-  
+
 }
 
 
@@ -24,7 +24,6 @@ void Amigos::setNivel(int nivel){
 
 string Amigos::toString(){
   stringstream ss;
-  ss << "Amigo; Nivel: ";
-  ss<< nivel;
+  ss << Contacto::toString() << nivel;
   return ss.str();
 }

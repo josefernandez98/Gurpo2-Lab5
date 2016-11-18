@@ -24,7 +24,6 @@ void Bloqueados::setNivelOdio (int nivelOdio) {
 
 string Bloqueados::toString () {
     stringstream ss;
-    ss << "Nivel de Odio;";
-    ss << nivelOdio << ";";
+    ss << Contacto::toString() << nivelOdio << ";";
     return ss.str();
 }//Fin del metodo

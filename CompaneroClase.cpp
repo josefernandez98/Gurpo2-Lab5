@@ -23,7 +23,6 @@ void CompaneroClase::setClase(string clase){
 
 string CompaneroClase::toString(){
   stringstream ss;
-  ss << "Companero de Clase; Clase: ";
-  ss<< clase;
+  ss << Contacto::toString() << clase;
   return ss.str();
 }

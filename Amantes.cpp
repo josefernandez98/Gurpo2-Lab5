@@ -16,8 +16,7 @@ Amantes::Amantes(string nombreCompleto, string numeroTelefono, string direccionC
 
 string Amantes::toString () {
     stringstream ss;
-    ss << "Horario Disponible;";
-    ss << horarioDisponible << ";";
+    ss << Contacto::toString() << horarioDisponible << ";";
     return ss.str();
 }//Fin del metodo
 

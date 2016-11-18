@@ -24,7 +24,6 @@ void Pareja::setFecha(string fecha){
 
 string Pareja::toString(){
   stringstream ss;
-  ss << "Pareja; Fecha de Aniversario: ";
-  ss<< fecha;
+  ss << Contacto::toString() << fecha;
   return ss.str();
 }
