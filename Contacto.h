@@ -11,6 +11,7 @@ class Contacto {
         string direccionCorreo;
     public:
         Contacto();
+        Contacto(string, string, string);
         string getNombreCompleto();
         string getNumeroTelefono();
         string getDireccionCorreo();

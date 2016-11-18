@@ -9,6 +9,7 @@ class Amigos: public Contacto {
     int nivel;
   public:
     Amigos();
+    Amigos(string, string, string, int);
     int getNivel();
     void setNivel(int);
     string toString();
