@@ -8,6 +8,10 @@ using std::string;
 CompaneroClase::CompaneroClase(){
   clase="";
 }
+CompaneroClase::CompaneroClase(string nombreCompleto, string numeroTelefono, string direccionCorreo, string clase):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),clase(clase){
+
+}
 
 string CompaneroClase::getClase(){
   return clase;

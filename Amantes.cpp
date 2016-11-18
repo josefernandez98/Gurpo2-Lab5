@@ -9,6 +9,11 @@ Amantes::Amantes () {
     horarioDisponible = "";
 }
 
+Amantes::Amantes(string nombreCompleto, string numeroTelefono, string direccionCorreo, string horarioDisponible):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),horarioDisponible(horarioDisponible){
+
+}
+
 string Amantes::toString () {
     stringstream ss;
     ss << "Horario Disponible;";

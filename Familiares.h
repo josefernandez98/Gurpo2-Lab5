@@ -9,6 +9,7 @@ class Familiares : public Contacto {
         string relacionFamiliar;
     public:
         Familiares();
+        Familiares();
         string getRelacionFamiliar();
         void setRelacionFamiliar(string);
         string toString();

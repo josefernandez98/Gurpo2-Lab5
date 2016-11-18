@@ -10,6 +10,7 @@ class CompaneroTrabajo: public Contacto {
     string departamento;
   public:
     CompaneroTrabajo();
+    CompaneroTrabajo();
     string getDepartamento();
     void setDepartamento(string);
     string toString();
