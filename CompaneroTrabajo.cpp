@@ -1,6 +1,7 @@
 #include <sstream>
 #include "CompaneroTrabajo.h"
 #include "Contacto.h"
+#include <string>
 
 using std::stringstream;
 using std::string;
@@ -9,8 +10,8 @@ CompaneroTrabajo::CompaneroTrabajo(){
   departamento="";
 }
 
-CompaneroTrabajo::CompaneroTrabajo(string nombreCompleto, string numeroTelefono, string direccionCorreo, int nivel):Contacto(nombreCompleto, numeroTelefono
-,direccionCorreo),nivel(nivel){
+CompaneroTrabajo::CompaneroTrabajo(string nombreCompleto, string numeroTelefono, string direccionCorreo, string deparamento):Contacto(nombreCompleto, numeroTelefono
+,direccionCorreo),departamento(departamento){
 
 }
 
