@@ -15,6 +15,10 @@ nombreCompleto(nombreCompleto), numeroTelefono(numeroTelefono), direccionCorreo(
 
 }//Fin del constructor
 
+Contacto::~Contacto(){
+  
+}
+
 string Contacto::getNombreCompleto () {
     return nombreCompleto;
 }//Fin del metodo

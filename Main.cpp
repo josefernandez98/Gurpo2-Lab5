@@ -112,34 +112,37 @@ int main(int argc, char const *argv[]) {
     if(opcion==2){
       int indice=0;
       for (int i = 0; i < lista.size(); i++) {
-        if(dynamic_cast<Amigo>(lista.at(i))!=NULL){
-          Amigos* temp = dynamic_cast<Amigos*>(lista.at(i));
+
+        if(dynamic_cast<Amigos*>(lista.at(i))!=NULL){
+          Amigos* temp = static_cast<Amigos*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<Pareja>(lista.at(i))!=NULL){
-          Pareja* temp = dynamic_cast<Pareja*>(lista.at(i));
+        if(dynamic_cast<Pareja*>(lista.at(i))!=NULL){
+          Pareja* temp = static_cast<Pareja*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<CompaneroTrabajo>(lista.at(i))!=NULL){
-          CompaneroTrabajo* temp = dynamic_cast<CompaneroTrabajo*>(lista.at(i));
+        if(dynamic_cast<CompaneroTrabajo*>(lista.at(i))!=NULL){
+          CompaneroTrabajo* temp = static_cast<CompaneroTrabajo*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<CompaneroClase>(lista.at(i))!=NULL){
-          CompaneroClase* temp = dynamic_cast<CompaneroClase*>(lista.at(i));
+        if(dynamic_cast<CompaneroClase*>(lista.at(i))!=NULL){
+          CompaneroClase* temp = static_cast<CompaneroClase*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<Familiares>(lista.at(i))!=NULL){
-          Familiares* temp = dynamic_cast<Familiares*>(lista.at(i));
+        if(dynamic_cast<Familiares*>(lista.at(i))!=NULL){
+          Familiares* temp = static_cast<Familiares*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<Amantes>(lista.at(i))!=NULL){
-          Amantes* temp = dynamic_cast<Amantes*>(lista.at(i));
+        if(dynamic_cast<Amantes*>(lista.at(i))!=NULL){
+          Amantes* temp = static_cast<Amantes*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
-        if(dynamic_cast<Bloqueados>(lista.at(i))!=NULL){
-          Bloqueados* temp = dynamic_cast<Bloqueados*>(lista.at(i));
+        if(dynamic_cast<Bloqueados*>(lista.at(i))!=NULL){
+          Bloqueados* temp = static_cast<Bloqueados*>(lista.at(i));
           cout << i << ": " << temp->toString() << endl;
         }
+
+        //Amigos* temp = static_cast<Amigos*>(lista.at(i));
       }
       cout << "Ingrese el numero que desea eliminar: ";
       cin >> indice;

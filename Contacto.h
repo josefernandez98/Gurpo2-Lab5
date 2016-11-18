@@ -5,12 +5,13 @@
 using namespace std;
 
 class Contacto {
-    private:
+  protected:
         string nombreCompleto;
         string numeroTelefono;
         string direccionCorreo;
     public:
         Contacto();
+        virtual ~Contacto();
         Contacto(string, string, string);
         string getNombreCompleto();
         string getNumeroTelefono();
