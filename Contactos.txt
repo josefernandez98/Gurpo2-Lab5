@@ -1,0 +1,12 @@
+Amigos: 
+0: Jose;823921;jrofe;21
+Parejas: 
+1: Juan;32134;ewo@;291
+Companero de Trabajo: 
+2: Migue;10394;jewow;
+Companero de Clase: 
+3: Figue;103;wiew;NAL
+Familiares: 
+4: PEPS;92012;roed;API;
+Amantes: 
+Bloquados: 
