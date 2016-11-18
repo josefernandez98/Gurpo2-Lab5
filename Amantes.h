@@ -9,7 +9,7 @@ class Amantes : public Contacto  {
         string horarioDisponible;
     public:
         Amantes();
-        Amantes();
+        Amantes(string, string, string, string);
         string getHorarioDisponible();
         void setHorarioDisponible(string);
         string toString();

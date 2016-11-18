@@ -80,7 +80,7 @@ int main(int argc, char const *argv[]) {
           cin.ignore();
           getline(cin,fecha);
           cout << endl;
-          
+
 
 
         }
