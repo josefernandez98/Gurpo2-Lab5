@@ -248,7 +248,7 @@ int main(int argc, char const *argv[]) {
           cout << i << ": " << temp->toString() << endl;
         }
 
-        //Amigos* temp = static_cast<Amigos*>(lista.at(i));
+
       }
       cout << "Ingrese el numero que desea eliminar: ";
       cin >> indice;
@@ -258,9 +258,96 @@ int main(int argc, char const *argv[]) {
 
     }//Fin del if opcion 2
     if(opcion==3){
+      cout << "Amigos: "<< endl;
+      int indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+        if(dynamic_cast<Amigos*>(lista.at(i))!=NULL){
+          Amigos* temp = static_cast<Amigos*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+
+      }
+      cout << "Parejas: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+
+        if(dynamic_cast<Pareja*>(lista.at(i))!=NULL){
+          Pareja* temp = static_cast<Pareja*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+      }
+      cout << "Companero de Trabajo: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+
+        if(dynamic_cast<CompaneroTrabajo*>(lista.at(i))!=NULL){
+          CompaneroTrabajo* temp = static_cast<CompaneroTrabajo*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+      }
+      cout << "Companero de Clase: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+
+        if(dynamic_cast<CompaneroClase*>(lista.at(i))!=NULL){
+          CompaneroClase* temp = static_cast<CompaneroClase*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+
+      }
+      cout << "Familiares: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+        if(dynamic_cast<Familiares*>(lista.at(i))!=NULL){
+          Familiares* temp = static_cast<Familiares*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+      }
+      cout << "Amantes: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+
+        if(dynamic_cast<Amantes*>(lista.at(i))!=NULL){
+          Amantes* temp = static_cast<Amantes*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+
+      }
+      cout << "Bloquados: "<< endl;
+      indice=0;
+      for (int i = 0; i < lista.size(); i++) {
+
+
+        if(dynamic_cast<Bloqueados*>(lista.at(i))!=NULL){
+          Bloqueados* temp = static_cast<Bloqueados*>(lista.at(i));
+          cout << i << ": " << temp->toString() << endl;
+        }
+
+
+      }
+
+    }
+    if(opcion==4){
       cout << "Adios" << endl;
     }//Fin del if opcion 3
-  } while(opcion!=3);
+  } while(opcion!=4);
   return 0;
 }//Fin del main
 
@@ -268,7 +355,8 @@ void menu(){
   cout << "Bienvenido al Guarda Contactos || Made by Grupo 2" << endl;
   cout << "1) Agregar Contacto"<< endl;
   cout << "2) Eliminar Contacto" << endl;
-  cout << "3) Salir" << endl;
+  cout << "3) Listar" << endl;
+  cout << "4) Salir" << endl;
   cout << "Ingrese su opcion: ";
 }
 void menu2(){
