@@ -17,10 +17,10 @@ using namespace std;
 void menu();
 void menu2();
 
-
 int main(int argc, char const *argv[]) {
   int opcion=0;
   int opcion2=0;
+  int contadorPareja = 0;
   vector<Contacto*> lista;
   do {
     menu();
@@ -43,6 +43,15 @@ int main(int argc, char const *argv[]) {
           cout << endl;
           cout << "Ingrese el Numero de Telefono: ";
           cin >> numeroTelefono;
+          for (int i = 0; i < lista.size(); i++) {
+              if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                  for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                        cout << "Numero repetido" << endl;
+                        cout << "Ingrese el Numero de Telefono: ";
+                        cin >> numeroTelefono;
+                  }
+              }
+          }
           cout << endl;
           cout << "Ingrese la direccion de Correo: ";
           cin.ignore();
@@ -61,28 +70,41 @@ int main(int argc, char const *argv[]) {
           cout << "Contacto agregado." << endl;
         }
         if(opcion2==2){ //pareja
-          string fecha="";
-          string nombreCompleto="";
-          string numeroTelefono="";
-          string direccionCorreo="";
-          cout << "Ingrese el Nombre Completo: ";
-          cin.ignore();
-          getline(cin,nombreCompleto);
-          cout << endl;
-          cout << "Ingrese el Numero de Telefono: ";
-          cin.ignore();
-          getline(cin,numeroTelefono);
-          cout << endl;
-          cout << "Ingrese la direccion de Correo: ";
-          cin.ignore();
-          getline(cin,direccionCorreo);
-          cout << endl;
-          cout << "Ingrese fecha que empezaron a salir: ";
-          cin.ignore();
-          getline(cin,fecha);
-          cout << endl;
-          lista.push_back(new Pareja(nombreCompleto,numeroTelefono,direccionCorreo,fecha));
-          cout << "Contacto agregado." << endl;
+          if (contadorPareja < 1) {
+              string fecha="";
+              string nombreCompleto="";
+              string numeroTelefono="";
+              string direccionCorreo="";
+              cout << "Ingrese el Nombre Completo: ";
+              cin.ignore();
+              getline(cin,nombreCompleto);
+              cout << endl;
+              cout << "Ingrese el Numero de Telefono: ";
+              cin >> numeroTelefono;
+              for (int i = 0; i < lista.size(); i++) {
+                  if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                      for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                            cout << "Numero repetido" << endl;
+                            cout << "Ingrese el Numero de Telefono: ";
+                            cin >> numeroTelefono;
+                      }
+                  }
+              }
+              cout << endl;
+              cout << "Ingrese la direccion de Correo: ";
+              cin.ignore();
+              getline(cin,direccionCorreo);
+              cout << endl;
+              cout << "Ingrese fecha que empezaron a salir: ";
+              cin.ignore();
+              getline(cin,fecha);
+              cout << endl;
+              lista.push_back(new Pareja(nombreCompleto,numeroTelefono,direccionCorreo,fecha));
+              contadorPareja++;
+              cout << "Contacto agregado." << endl;
+          } else {
+              cout << "Solo puede tener una pareja, zorro."<< endl;
+          }
         }//Fin del if opcion 2
         if(opcion2==3){ //companero trabajo
             string departamento="";
@@ -94,8 +116,16 @@ int main(int argc, char const *argv[]) {
             getline(cin,nombreCompleto);
             cout << endl;
             cout << "Ingrese el Numero de Telefono: ";
-            cin.ignore();
-            getline(cin,numeroTelefono);
+            cin >> numeroTelefono;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                    for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                          cout << "Numero repetido" << endl;
+                          cout << "Ingrese el Numero de Telefono: ";
+                          cin >> numeroTelefono;
+                    }
+                }
+            }
             cout << endl;
             cout << "Ingrese la direccion de Correo: ";
             cin.ignore();
@@ -118,8 +148,16 @@ int main(int argc, char const *argv[]) {
             getline(cin,nombreCompleto);
             cout << endl;
             cout << "Ingrese el Numero de Telefono: ";
-            cin.ignore();
-            getline(cin,numeroTelefono);
+            cin >> numeroTelefono;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                    for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                          cout << "Numero repetido" << endl;
+                          cout << "Ingrese el Numero de Telefono: ";
+                          cin >> numeroTelefono;
+                    }
+                }
+            }
             cout << endl;
             cout << "Ingrese la direccion de Correo: ";
             cin.ignore();
@@ -142,8 +180,16 @@ int main(int argc, char const *argv[]) {
             getline(cin,nombreCompleto);
             cout << endl;
             cout << "Ingrese el Numero de Telefono: ";
-            cin.ignore();
-            getline(cin,numeroTelefono);
+            cin >> numeroTelefono;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                    for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                          cout << "Numero repetido" << endl;
+                          cout << "Ingrese el Numero de Telefono: ";
+                          cin >> numeroTelefono;
+                    }
+                }
+            }
             cout << endl;
             cout << "Ingrese la direccion de Correo: ";
             cin.ignore();
@@ -166,8 +212,16 @@ int main(int argc, char const *argv[]) {
             getline(cin,nombreCompleto);
             cout << endl;
             cout << "Ingrese el Numero de Telefono: ";
-            cin.ignore();
-            getline(cin,numeroTelefono);
+            cin >> numeroTelefono;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                    for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                          cout << "Numero repetido" << endl;
+                          cout << "Ingrese el Numero de Telefono: ";
+                          cin >> numeroTelefono;
+                    }
+                }
+            }
             cout << endl;
             cout << "Ingrese la direccion de Correo: ";
             cin.ignore();
@@ -190,8 +244,16 @@ int main(int argc, char const *argv[]) {
             getline(cin,nombreCompleto);
             cout << endl;
             cout << "Ingrese el Numero de Telefono: ";
-            cin.ignore();
-            getline(cin,numeroTelefono);
+            cin >> numeroTelefono;
+            for (int i = 0; i < lista.size(); i++) {
+                if (lista.at(i)->getNumeroTelefono() == numeroTelefono) {
+                    for (;lista.at(i)->getNumeroTelefono() == numeroTelefono;) {
+                          cout << "Numero repetido" << endl;
+                          cout << "Ingrese el Numero de Telefono: ";
+                          cin >> numeroTelefono;
+                    }
+                }
+            }
             cout << endl;
             cout << "Ingrese la direccion de Correo: ";
             cin.ignore();
